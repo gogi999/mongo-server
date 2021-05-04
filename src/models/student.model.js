@@ -3,15 +3,15 @@ import mongoose from 'mongoose';
 const StudentSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: true
+        required: [true, 'Please enter your first name!']
     },
     lastName: {
         type: String,
-        required: true
+        required: [true, 'Please enter your last name!']
     },
     yearOfBirth: {
         type: Number,
-        required: true
+        required: [true, 'Please enter year of your birth!']
     },
     address: {
         type: String

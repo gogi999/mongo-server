@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 const CourseSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: [true, 'Please enter name of the course!']
     },
     points: {
         type: Number,
-        required: true
+        required: [true, 'Please enter points for the course!']
     }
 });
 
